@@ -1,16 +1,21 @@
-
 syntax on
 
+set ruler
+set relativenumber
+
+" Whitespace / Indents
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set relativenumber
-set smartcase
+
+" Searching
 set incsearch
+set ignorecase
+set smartcase
 
 " Mappings
 inoremap jj <Esc>
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+noremap <CR> o<Esc>
+"nmap <S-Enter> O<Esc>
 
