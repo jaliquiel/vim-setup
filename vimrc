@@ -19,9 +19,9 @@ inoremap jj <Esc>
 noremap <CR> o<Esc>
 "nmap <S-Enter> O<Esc>
 
-
 let mapleader = " "
 
+" Windows management
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
