@@ -11,3 +11,17 @@ Link to explanation: https://stackoverflow.com/questions/18197705/adding-your-vi
 echo "runtime vimrc" > .vimrc
 git clone https://github.com/jaliquiel/vim-setup.git .vim
 ```
+
+# Set up swap and undo file directories
+```
+mkdir .undo
+mkdir .swp
+```
+# Download vim-plug
+- Inside your .vim folder, create an autoload directory
+- Download plug.vim
+```
+mkdir autoload
+cd autoload
+curl -o plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```

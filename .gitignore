@@ -1,2 +1,5 @@
 .netrwhist
-.vimrc
+vimrc-old
+.swp/*
+autoload/*
+plugged/*
