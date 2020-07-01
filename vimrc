@@ -31,15 +31,37 @@ noremap <CR> o<Esc>
 
 let mapleader = " "
 
-" Window management
-"nnoremap <leader>h :wincmd h<CR>
-"nnoremap <leader>j :wincmd j<CR>
-"nnoremap <leader>k :wincmd k<CR>
-"noremap <leader>l :wincmd l<CR>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-h> <c-w>h
-map <c-l> <c-w>l
+" ==========================================
+"" Window management
+" ==========================================
+" Reference for mappings: http://www.agillo.net/simple-vim-window-management/
+
+" Switch between open buffers
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+noremap <leader>l :wincmd l<CR>
+" map <c-j> <c-w>j
+" map <c-k> <c-w>k
+" map <c-h> <c-w>h
+" map <c-l> <c-w>l
+
+" Move buffer window to desired position
+nnoremap <leader>H :wincmd H<CR>
+nnoremap <leader>J :wincmd J<CR>
+nnoremap <leader>K :wincmd K<CR>
+noremap <leader>L :wincmd L<CR>
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" resize buffer window by +/- 3 using arrow keys
+nmap <left>  :3wincmd <<cr>
+nmap <right> :3wincmd ><cr>
+nmap <up>    :3wincmd +<cr>
+nmap <down>  :3wincmd -<cr>
+
 
 " ==========================================
 "" Vim-plug Shenanigans
