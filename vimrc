@@ -28,7 +28,6 @@ set smartcase
 inoremap jj <Esc>
 inoremap JJ <Esc>
 noremap <CR> o<Esc>
-"nmap <S-Enter> O<Esc>
 
 let mapleader = " "
 

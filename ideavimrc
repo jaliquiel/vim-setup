@@ -1,0 +1,51 @@
+
+let mapleader = " "
+
+" Whitespace / Indents
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" Searching
+set incsearch
+set ignorecase
+set smartcase
+
+set relativenumber
+
+" Mappings
+inoremap jj <Esc>
+inoremap JJ <Esc>
+noremap <CR> o<Esc>
+
+" open and search for a file in navigation tree     
+nnoremap <Leader>n :action ActivateProjectToolWindow<CR>
+" toggle relative numbers
+nnoremap <F3> :set relativenumber!<CR>
+" self explanatory
+nnoremap <Leader>z :action HideAllWindows<CR>
+" close window
+nnoremap <Leader>x :q<CR>
+
+" ==========================================
+"" Buffer management
+" ==========================================
+" Show all buffers and then type :b for switching easy
+" https://dev.to/iggredible/using-buffers-windows-and-tabs-efficiently-in-vim-56jc
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
+" ==========================================
+"" Plugins
+" ==========================================
+set surround
+set commentary
+set ReplaceWithRegister
+set highlightedyank
+
+" ==========================================
+"" Vim highlightedyank settings
+" ==========================================
+let g:highlightedyank_highlight_duration = "500"
+" let g:highlightedyank_highlight_color = "rgba(121, 242, 123, 1)"
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
