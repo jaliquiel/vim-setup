@@ -26,10 +26,26 @@ set smartcase
 
 " Mappings
 inoremap jj <Esc>
+inoremap JJ <Esc>
 noremap <CR> o<Esc>
 "nmap <S-Enter> O<Esc>
 
 let mapleader = " "
+
+" ==========================================
+"" Buffer management
+" ==========================================
+
+" Show all buffers and then type :b for switching easy
+" https://dev.to/iggredible/using-buffers-windows-and-tabs-efficiently-in-vim-56jc
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
+" Switching to most recent used buffer
+" https://stackoverflow.com/questions/5559029/quickly-switching-buffers-in-vim-normal-mode
+nnoremap <leader><tab> :b#<cr>
+
+" Not save required when switching buffers
+set hidden
 
 " ==========================================
 "" Window management
@@ -57,11 +73,16 @@ set splitbelow
 set splitright
 
 " resize buffer window by +/- 3 using arrow keys
-nmap <left>  :3wincmd <<cr>
-nmap <right> :3wincmd ><cr>
-nmap <up>    :3wincmd +<cr>
-nmap <down>  :3wincmd -<cr>
+noremap <left>  :3wincmd <<cr>
+noremap <right> :3wincmd ><cr>
+noremap <up>    :3wincmd +<cr>
+noremap <down>  :3wincmd -<cr>
 
+" vertical split, split, close, rotate
+" noremap <leader>wv :wincmd v<cr>
+" noremap <leader>ws :wincmd s<cr>
+" noremap <leader>wc :wincmd q<cr>
+" noremap <leader>wr <C-W>r
 
 " ==========================================
 "" Vim-plug Shenanigans
