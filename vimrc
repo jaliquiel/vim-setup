@@ -29,6 +29,21 @@ inoremap jj <Esc>
 inoremap JJ <Esc>
 noremap <CR> o<Esc>
 
+" Copy / Paste faster from clipboard
+" https://vim.fandom.com/wiki/Accessing_the_system_clipboard
+:inoremap <C-v> <ESC>"+pa
+:vnoremap <C-c> "+y
+:vnoremap <C-d> "+d
+
+" Faster saving
+" https://vim.fandom.com/wiki/Saving_a_file
+nmap <c-s> :w<CR>
+" vmap <c-s> <Esc><c-s>gv
+" imap <c-s> <Esc><c-s>
+" nmap <F2> :update<CR>
+" vmap <F2> <Esc><F2>gv
+" imap <F2> <c-o><F2>
+
 let mapleader = " "
 
 " ==========================================
@@ -56,10 +71,6 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 noremap <leader>l :wincmd l<CR>
-" map <c-j> <c-w>j
-" map <c-k> <c-w>k
-" map <c-h> <c-w>h
-" map <c-l> <c-w>l
 
 " Move buffer window to desired position
 nnoremap <leader>H :wincmd H<CR>
@@ -118,6 +129,8 @@ set background=dark
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 " let g:airline_right_sep='<'
 " let g:airline_left_sep='>'
 

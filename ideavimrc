@@ -19,6 +19,11 @@ inoremap jj <Esc>
 inoremap JJ <Esc>
 noremap <CR> o<Esc>
 
+" Faster copy/paste from clipboard
+:inoremap <C-v> <ESC>"+pa
+:vnoremap <C-c> "+y
+:vnoremap <C-d> "+d
+
 " open and search for a file in navigation tree     
 nnoremap <Leader>n :action ActivateProjectToolWindow<CR>
 " toggle relative numbers
