@@ -1,5 +1,6 @@
 
 let mapleader = " "
+syntax on
 
 " Whitespace / Indents
 set tabstop=4 softtabstop=4
@@ -14,7 +15,9 @@ set smartcase
 
 set relativenumber
 
-" Mappings
+" ==========================================
+"" Mappings
+" ==========================================
 inoremap jj <Esc>
 inoremap JJ <Esc>
 noremap <CR> o<Esc>

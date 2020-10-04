@@ -24,10 +24,24 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Mappings
+" ==========================================
+"" Mappings
+" ==========================================
 inoremap jj <Esc>
 inoremap JJ <Esc>
 noremap <CR> o<Esc>
+
+" Toggle Relative or absolute number lines
+function! NumberToggle()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
+endfunction
+nnoremap <F3> :call NumberToggle()<CR>
 
 " Copy / Paste faster from clipboard
 " https://vim.fandom.com/wiki/Accessing_the_system_clipboard
@@ -114,6 +128,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
+" Syntax
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " ==========================================
