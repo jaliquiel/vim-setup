@@ -123,6 +123,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'inkarkat/vim-ReplaceWithRegister'
+Plug 'machakann/vim-highlightedyank'
 " Making things pretty
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -136,6 +137,7 @@ call plug#end()
 "" Color Settings
 " ==========================================
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 "colorscheme monokai
 set background=dark
 
@@ -146,9 +148,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
 " let g:airline_right_sep='<'
 " let g:airline_left_sep='>'
 
-
-
+" ==========================================
+"" Highlighted Yank Settings
+" ==========================================
+let g:highlightedyank_highlight_duration = 500
