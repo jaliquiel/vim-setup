@@ -18,6 +18,14 @@ mkdir .undo
 mkdir .swp
 ```
 
+# Ideavim setup
+- Create a .ideavimrc file
+- Direct it to your ideavimrc inside the folder
+```
+echo source ~/.vim/ideavimrc > .ideavimrc
+```
+
+
 # Download vim-plug
 - Inside your .vim folder, create an autoload directory
 - Download plug.vim
