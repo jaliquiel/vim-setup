@@ -35,6 +35,8 @@ nnoremap <F3> :set relativenumber!<CR>
 nnoremap <Leader>z :action HideAllWindows<CR>
 " close window
 nnoremap <Leader>x :q<CR>
+" Override methods 
+nnoremap <Leader>o :action OverrideMethods<CR>
 
 " ==========================================
 "" Buffer management
@@ -54,6 +56,6 @@ set highlightedyank
 " ==========================================
 "" Vim highlightedyank settings
 " ==========================================
-let g:highlightedyank_highlight_duration = "500"
-" let g:highlightedyank_highlight_color = "rgba(121, 242, 123, 1)"
-let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
+" let g:highlightedyank_highlight_duration = "500"
+" " let g:highlightedyank_highlight_color = "rgba(121, 242, 123, 1)"
+" let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
