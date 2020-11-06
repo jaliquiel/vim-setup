@@ -27,16 +27,43 @@ noremap <CR> o<Esc>
 :vnoremap <C-c> "+y
 :vnoremap <C-d> "+d
 
-" open and search for a file in navigation tree     
-nnoremap <Leader>n :action ActivateProjectToolWindow<CR>
 " toggle relative numbers
 nnoremap <F3> :set relativenumber!<CR>
+
+
+" ==========================================
+"" Idea mappings
+" ==========================================
+" open and search for a file in navigation tree     
+nnoremap <Leader>n :action ActivateProjectToolWindow<CR>
 " self explanatory
 nnoremap <Leader>z :action HideAllWindows<CR>
 " close window
 nnoremap <Leader>x :q<CR>
-" Override methods 
-nnoremap <Leader>o :action OverrideMethods<CR>
+
+" build and debug actions
+nnoremap <Leader>br :action Run<CR>
+
+" refactoring actions
+nnoremap <Leader>rr :action RenameElement<CR>i
+
+" fix actions
+nnoremap <Leader>ff :action ReformatCode<CR>
+nnoremap <Leader>fa :action ShowIntentionActions<CR><Esc>
+
+" navigation ans search
+nnoremap <Leader>su :action ShowUsages<CR>
+nnoremap <Leader>sU :action FindUsages<CR>
+nnoremap <Leader>si :action GotoImplementation<CR>
+
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+
+" generate actions
+nnoremap <Leader>go :action OverrideMethods<CR>
+" nnoremap <Leader>o :action OverrideMethods<CR>
+
+
 
 " ==========================================
 "" Buffer management
