@@ -45,7 +45,9 @@ nnoremap <Leader>x :q<CR>
 nnoremap <Leader>br :action Run<CR>
 
 " refactoring actions
-nnoremap <Leader>rr :action RenameElement<CR>i
+nnoremap <Leader>rr :action RenameElement<CR>
+nnoremap <Leader>ri :action OptimizeImports<CR>
+nnoremap <Leader>rc :action ReformatCode<CR>
 
 " fix actions
 nnoremap <Leader>ff :action ReformatCode<CR>
@@ -61,8 +63,10 @@ nnoremap [e :action GotoPreviousError<CR>
 
 " generate actions
 nnoremap <Leader>go :action OverrideMethods<CR>
-" nnoremap <Leader>o :action OverrideMethods<CR>
 
+" Manage windows (similar to buffers)
+nnoremap <tab>:action NextTab<CR>
+nnoremap <s-tab>:action PreviousTab<CR>
 
 
 " ==========================================
