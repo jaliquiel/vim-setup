@@ -58,6 +58,9 @@ nmap <c-s> :w<CR>
 " vmap <F2> <Esc><F2>gv
 " imap <F2> <c-o><F2>
 
+" Show navigation tree
+nnoremap <Leader>n :Ex<CR>
+
 let mapleader = " "
 
 " ==========================================
@@ -71,6 +74,13 @@ nnoremap <Leader>b :buffers<CR>:buffer<Space>
 " Switching to most recent used buffer
 " https://stackoverflow.com/questions/5559029/quickly-switching-buffers-in-vim-normal-mode
 nnoremap <leader><tab> :b#<cr>
+
+" Move to next or previous buffer
+nnoremap <tab> :bn<cr>
+nnoremap <s-tab> :bp<cr>
+
+" Delete current buffer
+nnoremap <leader>bd :bd<cr>
 
 " Not save required when switching buffers
 set hidden
@@ -107,6 +117,10 @@ noremap <down>  :3wincmd -<cr>
 " noremap <leader>ws :wincmd s<cr>
 " noremap <leader>wc :wincmd q<cr>
 " noremap <leader>wr <C-W>r
+
+" close all windows except current one
+noremap <leader>o :wincmd o<CR>
+
 
 " ==========================================
 "" Vim-plug Shenanigans
