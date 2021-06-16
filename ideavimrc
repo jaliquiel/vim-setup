@@ -43,6 +43,7 @@ nnoremap <Leader>x :q<CR>
 
 " build and debug actions
 nnoremap <Leader>br :action Run<CR>
+nnoremap <Leader>bd :action Debug<CR>
 
 " refactoring actions
 nnoremap <Leader>rr :action RenameElement<CR>
@@ -50,16 +51,23 @@ nnoremap <Leader>ri :action OptimizeImports<CR>
 nnoremap <Leader>rc :action ReformatCode<CR>
 
 " fix actions
-nnoremap <Leader>ff :action ReformatCode<CR>
 nnoremap <Leader>fa :action ShowIntentionActions<CR><Esc>
 
-" navigation ans search
+" navigation and search
 nnoremap <Leader>su :action ShowUsages<CR>
 nnoremap <Leader>sU :action FindUsages<CR>
 nnoremap <Leader>si :action GotoImplementation<CR>
+nnoremap <Leader>ss :action GotoSuperMethod<CR>
 
 nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
+
+" bookmarks (a bit similar to vim marks)
+nnoremap <Leader>m :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <Leader>' :action ShowBookmarks<CR>
+nnoremap <Leader>` :action ShowBookmarks<CR>
+nnoremap ]b :action GotoNextBookmark<CR>
+nnoremap [b :action GotoPreviousBookmark<CR>
 
 " generate actions
 nnoremap <Leader>go :action OverrideMethods<CR>
