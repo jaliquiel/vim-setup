@@ -2,6 +2,9 @@
 let mapleader = " "
 syntax on
 
+" ==========================================
+"" Settings
+" ==========================================
 " Whitespace / Indents
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -14,6 +17,7 @@ set ignorecase
 set smartcase
 
 set relativenumber
+set scrolloff=5
 
 " ==========================================
 "" Mappings
@@ -43,7 +47,9 @@ nnoremap <Leader>x :q<CR>
 
 " build and debug actions
 nnoremap <Leader>br :action Run<CR>
+nnoremap <Leader>bs :action Stop<CR>
 nnoremap <Leader>bd :action Debug<CR>
+nnoremap <Leader>bp :action ToggleLineBreakpoint<CR>
 
 " refactoring actions
 nnoremap <Leader>rr :action RenameElement<CR>
@@ -52,6 +58,9 @@ nnoremap <Leader>rc :action ReformatCode<CR>
 
 " fix actions
 nnoremap <Leader>fa :action ShowIntentionActions<CR><Esc>
+nnoremap <Leader>fd :action QuickJavaDoc<CR><Esc>
+nnoremap <Leader>fe :action ShowErrorDescription<CR><Esc>
+nnoremap <Leader>fi :action QuickImplementations<CR><Esc>
 
 " navigation and search
 nnoremap <Leader>su :action ShowUsages<CR>
